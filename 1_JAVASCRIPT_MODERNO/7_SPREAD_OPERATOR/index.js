@@ -1,3 +1,5 @@
+// ... o mesmo eh utilizado para juntar elementos com javascript no ex foram juntados os elementos de dois vetores
+
 const a = [1, 2, 3]
 const b = [4, 5, 6]
 
