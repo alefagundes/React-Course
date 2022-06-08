@@ -1,9 +1,7 @@
-import HookUseReducerTeste from '../components/HookUseReducerTeste'
-
 const About = () => {
     return (
         <div>
-            <HookUseReducerTeste />
+            <h1>About</h1>
         </div>
     )
 }

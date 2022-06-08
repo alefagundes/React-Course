@@ -47,8 +47,9 @@ const HookUseReducerTeste = () => {
                 <input type="submit" value="Enviar" />
             </form>
             {tasksNew.map((task) => (
-                <li key={task.id} onDoubleClick={() => removeTask(task.id)}>
-                    {task.task}
+                <li key={task.id}>
+                    {task.task}{' '}
+                    <button onClick={() => removeTask(task.id)}>excluir</button>
                 </li>
             ))}
         </div>
