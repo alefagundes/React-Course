@@ -16,10 +16,23 @@ const HookUseEffect = () => {
     //a msg (valor do number eh: ${number}) eh disparada no console com o valor da variavel number no estado atual
     useEffect(() => {
         if (number > 0) {
-            console.log(`valor do number eh: ${number}`)
+            console.log(`Estou na execucao de n: ${number}`)
         }
     }, [number])
 
+    //3 - Cleanup useEffect - Posso ter diversos useEffect monitorando o mesmo dado
+    /* useEffect(() => {
+        //deve se ter cuidado com a imprementacao do useEffect devido ao vazamento de memoria (memory leak)
+        //neste exemplo temos a utilizacao da funcao setTimeout(nativa do js), se nao utilizamos o codigo de retorno da linha 32
+        //toda vez que alteramos de pagina a funcao eh reexcutada, imagine isso atrelado a chamada de uma api que retorna
+        //milhares de dados, a implementacao incorreta pode ocasionar na quebra do sistema.
+        const timer = setTimeout(() => {
+            console.log('hello world')
+            setNumber(number + 1)
+        }, 2000)
+        return () => clearTimeout(timer) //evitando a execucao indevida da funcao
+    }, [number])
+ */
     return (
         <div>
             <h1>effect</h1>

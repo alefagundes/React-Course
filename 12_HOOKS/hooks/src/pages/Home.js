@@ -3,7 +3,14 @@ import HookUseState from '../components/HookUseState'
 import HookUseReducerTeste from '../components/HookUseReducerTeste'
 import HookUseEffect from '../components/HookUseEffect'
 
+//hooks - react
+
+import { useContext } from 'react' //hook para consumir o contexto
+import { SomeContext } from '../components/HookUseContext' //contexto desenvolvido
+
 const Home = () => {
+    const { contextValue } = useContext(SomeContext)
+
     return (
         <div>
             <HookUseState />
@@ -12,6 +19,9 @@ const Home = () => {
             <HookUseReducerTeste />
             <h3>Use Effect</h3>
             <HookUseEffect />
+            <h2>useContext</h2>
+            <p>Valor do contexto: {contextValue}</p>
+            <hr />
         </div>
     )
 }
