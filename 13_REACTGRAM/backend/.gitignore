@@ -1,2 +1,4 @@
+# file and dependencies
 .env
 node_modules
+uploads
