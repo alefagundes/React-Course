@@ -133,7 +133,6 @@ function App() {
             {gameStages === 'game' && (
                 <Game
                     verifyLetter={verifyLetter}
-                    pickedWord={pickedWord}
                     pickedCategory={pickedCategory}
                     letters={letters}
                     guessedLetters={guessedLetters}

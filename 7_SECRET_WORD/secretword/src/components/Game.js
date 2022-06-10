@@ -4,7 +4,6 @@ import React, { useState, useRef } from 'react'
 
 const Game = ({
     verifyLetter,
-    pickedWord,
     pickedCategory,
     letters,
     guessedLetters,
