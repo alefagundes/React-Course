@@ -9,7 +9,7 @@ const generateToken = (id) => {
     return jwt.sign({ id }, jwtsecret, { expiresIn: '7d' })
 }
 const register = (req, res) => {
-    res.status(200).json({ message: 'Registro' })
+    res.status(200).json({ message: 'Usuário registrado com sucesso!' })
 }
 
 module.exports = { register }
