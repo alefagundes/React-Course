@@ -4,7 +4,7 @@ to run projects backend (API): npm run server
 to run project frontend (react app): npm start
 I'm using MongoDB Atlas to save datas
 
-Social midia where i talk about technologies and other things related to the area.
+Social media where i talk about technologies and other things related to the area.
 
 twitter: https://twitter.com/alesffagundes
 instagram: https://www.instagram.com/alessandro.f_/
