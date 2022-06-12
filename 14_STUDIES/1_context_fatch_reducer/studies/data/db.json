@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "name": "radio",
+      "price": "48,00",
+      "id": 3
+    },
+    {
+      "name": "binho",
+      "price": "7890",
+      "id": 4
+    }
+  ]
+}

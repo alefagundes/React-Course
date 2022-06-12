@@ -1,0 +1,28 @@
+.car_cont {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.car_card {
+    padding: 10px 50px;
+    margin: 10px;
+    border: 1px solid #000;
+    background-color: rgb(158, 245, 158);
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.formu form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formu input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px 1px;
+}

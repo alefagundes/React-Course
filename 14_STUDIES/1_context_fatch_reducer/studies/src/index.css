@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    padding-bottom: 400px;
+}
+
+.car-container {
+    display: flex;
+    justify-content: center;
+}

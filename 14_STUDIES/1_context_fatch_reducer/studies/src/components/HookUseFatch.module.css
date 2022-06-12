@@ -1,0 +1,21 @@
+.card {
+    padding: 10px 50px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    background-color: rgb(165, 185, 250);
+}
+
+.form form {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
