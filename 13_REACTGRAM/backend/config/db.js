@@ -5,13 +5,15 @@ const dbPassword = process.env.DB_PASSWORD
 const conn = async () => {
     try {
         const dbConn = await mongoose.connect(
-            `mongodb+srv://${dbUser}:${dbPassword}@cluster0.rsxrbu8.mongodb.net/?retryWrites=true&w=majority`
+            `mongodb+srv://${dbUser}:${dbPassword}@cluster0.fw5mcfz.mongodb.net/?retryWrites=true&w=majority`
         )
-        console.log('conectado com sucesso')
+        console.log('Conectado com sucesso')
         return dbConn
     } catch (err) {
         console.log(err)
     }
 }
+
+conn()
 
 module.exports = conn
