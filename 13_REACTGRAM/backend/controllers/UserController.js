@@ -42,8 +42,35 @@ const register = async (req, res) => {
     })
 }
 
-const login = (req, res) => {
-    res.status(200).json({ message: 'Login realizado com sucesso!' })
+const login = async (req, res) => {
+    const { email, password } = req.body
+    const user = await User.findOne({ email })
+
+    //check if user exists
+    if (!user) {
+        res.status(422).json({ error: 'E-mail ou Senha incorretos!' })
+        return
+    }
+    //check if passwords matches
+    const passwordsMatch = await bcrypt.compare(password, user.password)
+
+    if (!passwordsMatch) {
+        res.status(422).json({ errors: ['E-mail ou Senha incorretos!'] })
+        return
+    }
+    //return user with token
+    res.status(200).json({
+        _id: user._id,
+        profileImage: user.profileImage,
+        token: generateToken(user._id),
+    })
 }
 
-module.exports = { register, login }
+//get currentlogged in user
+const getCurrentUser = async (req, res) => {
+    //pega user pela requisicao
+    const user = req.user
+    res.status(200).json(user)
+}
+
+module.exports = { register, login, getCurrentUser }
