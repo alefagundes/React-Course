@@ -15,7 +15,7 @@ const authGuard = async (req, res, next) => {
     try {
         const verified = jwt.verify(token, jwtsecret)
         req.user = await User.findById(verified.id).select('-password')
-        //vai buscar na comprar o id da querisicao se existe um id no banco - a senha e retornar
+        //vai buscar na requisicao comparar o id da querisicao se existe um id no banco - a senha e retornar
         next()
     } catch (error) {
         res.status(401).json({ errors: ['Token invalido!'] })
