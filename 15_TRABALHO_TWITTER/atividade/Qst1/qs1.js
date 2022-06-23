@@ -11,10 +11,12 @@
 //essas mesmas operacoes sao padrao para todos, mas conforme a regra que o banco preve a acao pode sofre
 // alteracao acrecentando juros ou nao.
 
-//4 - Polimorfismo - POdemos descrever polimorfismo como sendo a derivacao de classes apartir de uma classe
+//4 - Polimorfismo - Podemos descrever polimorfismo como sendo a derivacao de classes apartir de uma classe
 // pai e essas demias classes podem aproveitar objetos e funcionalidades de formas difrentes
 
 // 1 EX: ao inves de dentro do programa declaramos as variaveis e rea
+
+const Album = require('../classes/Abum')
 
 const soma = (a, b) => {
     return a + b
@@ -23,3 +25,19 @@ const soma = (a, b) => {
 const menos = (a, b) => {
     return a - b
 }
+
+const calAlbum = (arr) => {}
+
+let listaAlbum = []
+
+const object = new Album('blue jeans', 'kawe', 2.05, 3, 'teste dos Guri')
+const object2 = new Album('blue jeans', 'kawe', 2.05, 5, 'teste dos Guri')
+/* const object3 = new Album('dois', 'teste2', 3.05, 3)
+const object4 = new Album('dois', 'teste2', 3.05, 6)
+const object5 = new Album('dois', 'teste2', 3.05, 5) */
+
+listaAlbum = [object, object2]
+const teste = object.showMusic()
+
+//const res = calAlbum(listaAlbum)
+console.log(teste)
