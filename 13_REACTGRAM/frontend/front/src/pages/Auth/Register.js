@@ -5,12 +5,20 @@ import { Link } from 'react-router-dom'
 
 //hooks
 import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+
+//redux
+import { register, reset } from '../../slices/authSlice'
 
 const Register = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [confirmpassword, setConfirmPassword] = useState('')
+
+    const dispatch = useDispatch()
+
+    const { loading, error } = useSelector((state) => state.auth)
 
     const handleSubtmit = (e) => {
         e.preventDefault()
@@ -21,7 +29,14 @@ const Register = () => {
             confirmpassword,
         }
         console.log(user)
+
+        dispatch(register(user))
     }
+
+    //Clean all auth states
+    useEffect(() => {
+        dispatch(reset())
+    }, [dispatch])
 
     return (
         <div id="register">
