@@ -11,7 +11,7 @@ const imageStorage = multer.diskStorage({
         } else if (req.baseUrl.includes('photos')) {
             folder = 'photos'
         }
-        cb(null, `./uploads/${folder}`)
+        cb(null, `./uploads/${folder}`) //pasta onde sera salva a fotos da applicacao!
     },
     filename: (req, file, cb) => {
         cb(null, Date.now() + path.extname(file.originalname))
